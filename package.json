@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build":  "sucrase ./src -d ./build --transforms imports",
+    "build":  "sucrase ./src -d ./dist --transforms imports",
     "dev:server": "nodemon src/server.js",
-    "start": "node build/server.js"
+    "start": "node dist/server.js"
   },
   "repository": {
     "type": "git",
