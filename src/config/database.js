@@ -1,5 +1,6 @@
 module.exports = {
-  dialect: process.env.DB_DIALECT,
+  dialect: 'postgres',
+  port: process.env.DB_PORT,
   host: process.env.DB_HOST,
   username: process.env.DB_USERNAME,
   password: process.env.DB_PASSWORD,
@@ -8,5 +9,11 @@ module.exports = {
     timeStamps: true,
     underscored: true,
     underscoredAll: true,
-  }
+  },
+  sslmode: "required",
+  dialectOptions: {
+    ssl: {
+      rejectUnauthorized: false,
+    },
+  },
 }
