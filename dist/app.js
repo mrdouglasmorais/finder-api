@@ -2,7 +2,6 @@
 
 var _express = require('express'); var _express2 = _interopRequireDefault(_express);
 var _cors = require('cors'); var _cors2 = _interopRequireDefault(_cors);
-var _path = require('path'); var _path2 = _interopRequireDefault(_path);
 var _routes = require('./routes'); var _routes2 = _interopRequireDefault(_routes);
 
 require('./database');
