@@ -1,13 +1,42 @@
 import Adverts from '../models/Adverts';
 
 class AdvertsController{
-  store(req, res){
-    console.log(req.query)
+  async store(req, res){
+    const { 
+      id, 
+      model, 
+      version, 
+      condition, 
+      certifield, 
+      location, 
+      brand, 
+      year, 
+      price, 
+      description, 
+      mileage, 
+      cartype, 
+      color, 
+      photosm, 
+      fuel } = await Adverts.create(req.body)
     return res.json({
-      message: "Okay"
+      id, 
+      model, 
+      version, 
+      condition, 
+      certifield, 
+      location, 
+      brand, 
+      year, 
+      price, 
+      description, 
+      mileage, 
+      cartype, 
+      color, 
+      photosm, 
+      fuel
     })
   }
-  index(req, res){
+  async index(req, res){
     console.log(req.query)
     return res.json({
       message: "OK"

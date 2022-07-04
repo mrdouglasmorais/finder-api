@@ -10,6 +10,8 @@ import Carmodel from "../app/models/Carmodel";
 import Mileage from '../app/models/Mileage';
 import Fuel from '../app/models/Fuel';
 import Additional from "../app/models/Additional";
+import Adverts from "../app/models/Adverts";
+import Carphoto from "../app/models/Carphoto";
 
 import databaseConfig from '../config/database';
 
@@ -23,7 +25,9 @@ const models = [
   Carmodel,
   Mileage,
   Fuel,
-  Additional
+  Additional,
+  Adverts,
+  Carphoto
 ];
 
 class Database{

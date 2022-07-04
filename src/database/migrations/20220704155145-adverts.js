@@ -39,7 +39,7 @@ module.exports = {
         allowNull: true
       },
       price: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.FLOAT,
         allowNull: false
       },
       year: {
@@ -77,7 +77,15 @@ module.exports = {
         onUpdate: 'CASCADE',
         onDelete: 'SET NULL',
         allowNull: true
-      }
+      },
+      created_at: {
+        type: Sequelize.DATE,
+        allowNull: false,
+      },
+      updated_at: {
+        type: Sequelize.DATE,
+        allowNull: false,
+      },
     })
   },
 

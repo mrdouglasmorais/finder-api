@@ -7,7 +7,7 @@
 [Clique aqui](https://carfinder-api.herokuapp.com/swagger/)
 
 ## Collections Insomnia:
-[Clique aqui](collection.yml)
+[Clique aqui](Insomnia_2022-07-04.yaml)
 
 ### Projeto exclusivo Icarros <> GamaAcademy
 

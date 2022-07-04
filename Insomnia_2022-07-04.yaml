@@ -1,0 +1,768 @@
+_type: export
+__export_format: 4
+__export_date: 2022-07-04T22:11:51.762Z
+__export_source: insomnia.desktop.app:v2022.4.2
+resources:
+  - _id: req_137d7b74e1984f229ea32f92ca0509a3
+    parentId: fld_0337ac8dc2394f6fbd2adcc6ba0f51fa
+    modified: 1656968588648
+    created: 1656968581676
+    url: "{{ _.BaseURL }}photos"
+    name: Get Photos
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1656933591026.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_0337ac8dc2394f6fbd2adcc6ba0f51fa
+    parentId: wrk_40b6a3e273d54474a85efd1a7614d0a4
+    modified: 1656968561276
+    created: 1656968561276
+    name: Photos
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1656968561276
+    _type: request_group
+  - _id: wrk_40b6a3e273d54474a85efd1a7614d0a4
+    parentId: null
+    modified: 1656932766943
+    created: 1656932766943
+    name: Carfinder
+    description: ""
+    scope: collection
+    _type: workspace
+  - _id: req_f1f569a8ac6e4008a307ed402dfcdc45
+    parentId: fld_0337ac8dc2394f6fbd2adcc6ba0f51fa
+    modified: 1656968648565
+    created: 1656968570284
+    url: "{{ _.BaseURL }}photos"
+    name: Post Photos
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: >-
+        {
+        	"value": "https://quatrorodas.abril.com.br/wp-content/uploads/2022/04/honda-civic-seda-e1650568274124.jpg"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_959c0f13c98045fc90e5e7929ffc5d3f
+    authentication: {}
+    metaSortKey: -1656933590976.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_0f8cae77e91c410c9b893e513b4d3a33
+    parentId: fld_9b36255fc1d7428cae0d95b8fc6b9e1b
+    modified: 1656951106916
+    created: 1656951088184
+    url: "{{ _.BaseURL }}additional"
+    name: Get Additionals
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1656933591014
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_9b36255fc1d7428cae0d95b8fc6b9e1b
+    parentId: wrk_40b6a3e273d54474a85efd1a7614d0a4
+    modified: 1656946810302
+    created: 1656946810302
+    name: Additionals
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1656946810303
+    _type: request_group
+  - _id: req_9ae776a71e35448dbc2b9257b18411cc
+    parentId: fld_9b36255fc1d7428cae0d95b8fc6b9e1b
+    modified: 1656972180100
+    created: 1656951076519
+    url: "{{ _.BaseURL }}additional"
+    name: Post Additionals
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"value": "Transmissão automática"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_959c0f13c98045fc90e5e7929ffc5d3f
+    authentication: {}
+    metaSortKey: -1656933590964
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_0afe3ba79a3044dfbc547be88fba2930
+    parentId: fld_e9a43ac62bcb452ca1a73d006cc2a1db
+    modified: 1656951531281
+    created: 1656951519933
+    url: "{{ _.BaseURL }}adverts"
+    name: Get Adverts
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1656951519933
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_e9a43ac62bcb452ca1a73d006cc2a1db
+    parentId: wrk_40b6a3e273d54474a85efd1a7614d0a4
+    modified: 1656933626802
+    created: 1656933626802
+    name: Adverts
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1656933626802
+    _type: request_group
+  - _id: req_fb4b58c99288485cb481c316cc1f1f8b
+    parentId: fld_e9a43ac62bcb452ca1a73d006cc2a1db
+    modified: 1656972678070
+    created: 1656972144939
+    url: "{{ _.BaseURL }}adverts"
+    name: Post Adverts
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+            "model": "Honda Civic",
+            "version": "EXL",
+            "certifield": true,
+            "year": 2022,
+            "price": 137.608,
+            "description": "Honda Civic"
+         }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_d17d98acd68b4391877f209e9431eade
+    authentication: {}
+    metaSortKey: -1656942555479.75
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_1bbedfe0ed2343d7a7af48cae8c0bba7
+    parentId: fld_9ab0404647c64287b48ab1813bd36a91
+    modified: 1656968564744
+    created: 1656946443539
+    url: "{{ _.BaseURL }}carmodels"
+    name: Post CarModels
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"value": "Coupe"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_959c0f13c98045fc90e5e7929ffc5d3f
+    authentication: {}
+    metaSortKey: -1656933590989
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_9ab0404647c64287b48ab1813bd36a91
+    parentId: wrk_40b6a3e273d54474a85efd1a7614d0a4
+    modified: 1656933596862
+    created: 1656933596862
+    name: CarModels
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1656933596862
+    _type: request_group
+  - _id: req_e30f24b3f485413abe2df793fea4b8eb
+    parentId: fld_9ab0404647c64287b48ab1813bd36a91
+    modified: 1656946459905
+    created: 1656946426851
+    url: "{{ _.BaseURL }}carmodels"
+    name: Get CarModels
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1656933590939
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_dd9a51c3b1b34b95b089493ab6ec4325
+    parentId: fld_5ce15b05d0024e50a92aedda05cc0c47
+    modified: 1656944876388
+    created: 1656939649283
+    url: "{{ _.BaseURL }}locale"
+    name: Post Locale
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"value": "Bahia"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_959c0f13c98045fc90e5e7929ffc5d3f
+    authentication: {}
+    metaSortKey: -1656933580899.75
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_5ce15b05d0024e50a92aedda05cc0c47
+    parentId: wrk_40b6a3e273d54474a85efd1a7614d0a4
+    modified: 1656933585016
+    created: 1656933585016
+    name: Locale
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1656933585016
+    _type: request_group
+  - _id: req_bf1883280a2a4bd2980ada5613fd962f
+    parentId: fld_5ce15b05d0024e50a92aedda05cc0c47
+    modified: 1656939664665
+    created: 1656939623472
+    url: "{{ _.BaseURL }}locale"
+    name: Get Locale
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1656933580849.75
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_6d998ffb10ba41a58ac27b6185f9d185
+    parentId: fld_6eb02800f560415cb33171a8cee073b2
+    modified: 1656944913665
+    created: 1656944901183
+    url: "{{ _.BaseURL }}transmission"
+    name: Get Transmission
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1656933580924.75
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_6eb02800f560415cb33171a8cee073b2
+    parentId: wrk_40b6a3e273d54474a85efd1a7614d0a4
+    modified: 1656933568351
+    created: 1656933568351
+    name: Transmission
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1656933568351
+    _type: request_group
+  - _id: req_c1616baca9f943a6adac5a102f81dd73
+    parentId: fld_6eb02800f560415cb33171a8cee073b2
+    modified: 1656945175527
+    created: 1656944887633
+    url: "{{ _.BaseURL }}transmission"
+    name: Post Transmission
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"value": "Automático"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_959c0f13c98045fc90e5e7929ffc5d3f
+    authentication: {}
+    metaSortKey: -1656933580874.75
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_e2e12ca6606d41de90e42fd3fc9b7146
+    parentId: fld_c2ee132eb10a46fdbb984ef89f8aea1d
+    modified: 1656946438310
+    created: 1656945181466
+    url: "{{ _.BaseURL }}cartype"
+    name: Post Cartype
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"value": "Coupe"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_959c0f13c98045fc90e5e7929ffc5d3f
+    authentication: {}
+    metaSortKey: -1656933580962.25
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_c2ee132eb10a46fdbb984ef89f8aea1d
+    parentId: wrk_40b6a3e273d54474a85efd1a7614d0a4
+    modified: 1656933560628
+    created: 1656933560628
+    name: Cartype
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1656933560628
+    _type: request_group
+  - _id: req_3a5616d160d94ea9874a01bea8478dd9
+    parentId: fld_c2ee132eb10a46fdbb984ef89f8aea1d
+    modified: 1656945195225
+    created: 1656945169971
+    url: "{{ _.BaseURL }}cartype"
+    name: Get Cartype
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1656933580912.25
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_eb1749832e2342e4bd5c390445eb0a87
+    parentId: fld_425690980df648c9885f017411f1c2a3
+    modified: 1656947784746
+    created: 1656947718257
+    url: "{{ _.BaseURL }}mileage"
+    name: Post Mileage
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"value": "até 40.000 km"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_959c0f13c98045fc90e5e7929ffc5d3f
+    authentication: {}
+    metaSortKey: -1656932777511.25
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_425690980df648c9885f017411f1c2a3
+    parentId: wrk_40b6a3e273d54474a85efd1a7614d0a4
+    modified: 1656933549369
+    created: 1656933549369
+    name: Mileage
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1656933549369
+    _type: request_group
+  - _id: req_76232b3757be4dd6b25f992d4780d241
+    parentId: fld_425690980df648c9885f017411f1c2a3
+    modified: 1656947730533
+    created: 1656947706292
+    url: "{{ _.BaseURL }}mileage"
+    name: Get Mileage
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1656932777461.25
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_d9e4b2501550499ba959048878168871
+    parentId: fld_bc7d149bd63d40d8b93c0fe9a399bc84
+    modified: 1656948070150
+    created: 1656948062007
+    url: "{{ _.BaseURL }}fuel"
+    name: Get Fuel
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1656932777539.375
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_bc7d149bd63d40d8b93c0fe9a399bc84
+    parentId: wrk_40b6a3e273d54474a85efd1a7614d0a4
+    modified: 1656933536576
+    created: 1656933536576
+    name: Fuels
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1656933536576
+    _type: request_group
+  - _id: req_9e82db16100e4f668c67de4e6c0af8c5
+    parentId: fld_bc7d149bd63d40d8b93c0fe9a399bc84
+    modified: 1656948450338
+    created: 1656948047552
+    url: "{{ _.BaseURL }}fuel"
+    name: Post Fuel
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"value": "Híbrido"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_959c0f13c98045fc90e5e7929ffc5d3f
+    authentication: {}
+    metaSortKey: -1656932777489.375
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_fb8b81b86c174f0e898da0efdea1fe2a
+    parentId: fld_5713d5da84d54059adef1ab632eda384
+    modified: 1656936708500
+    created: 1656936666413
+    url: "{{ _.BaseURL }}colors"
+    name: Get Collors
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1656932777467.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_5713d5da84d54059adef1ab632eda384
+    parentId: wrk_40b6a3e273d54474a85efd1a7614d0a4
+    modified: 1656933526303
+    created: 1656933526303
+    name: Colors
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1656933526303
+    _type: request_group
+  - _id: req_ef980591e8e1409d9dfab33d202ac65b
+    parentId: fld_5713d5da84d54059adef1ab632eda384
+    modified: 1656947711355
+    created: 1656936653548
+    url: "{{ _.BaseURL }}colors"
+    name: Post Colors
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"value": "Azul Metálico"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_959c0f13c98045fc90e5e7929ffc5d3f
+    authentication: {}
+    metaSortKey: -1656932777417.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_99683046432e4b8cbfca4729f5eaadc0
+    parentId: fld_9ba5da6faebb4717b1a8f154d8a254c7
+    modified: 1656939642413
+    created: 1656935905314
+    url: "{{ _.BaseURL }}condition"
+    name: Post Condition
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"value": "Usado"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_959c0f13c98045fc90e5e7929ffc5d3f
+    authentication: {}
+    metaSortKey: -1656932777430
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_9ba5da6faebb4717b1a8f154d8a254c7
+    parentId: wrk_40b6a3e273d54474a85efd1a7614d0a4
+    modified: 1656933517012
+    created: 1656933517012
+    name: Condition
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1656933517012
+    _type: request_group
+  - _id: req_e7c00d271b6e452893bdab927dc8c22b
+    parentId: fld_9ba5da6faebb4717b1a8f154d8a254c7
+    modified: 1656936205001
+    created: 1656935937481
+    url: "{{ _.BaseURL }}condition"
+    name: Get Conditions
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1656932777380
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_4d659acc75df44cc99dfe7d8563900cc
+    parentId: fld_8eee4b8b5e644066b078eb953c73e410
+    modified: 1656935900652
+    created: 1656934930194
+    url: "{{ _.BaseURL }}brands"
+    name: Post Brand
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"logo": "https://www.imagemhost.com.br/images/2022/06/09/audi.png",
+            "name": "Audi"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_959c0f13c98045fc90e5e7929ffc5d3f
+    authentication: {}
+    metaSortKey: -1656932777455
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_8eee4b8b5e644066b078eb953c73e410
+    parentId: wrk_40b6a3e273d54474a85efd1a7614d0a4
+    modified: 1656932791974
+    created: 1656932791974
+    name: Brands
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1656932791974
+    _type: request_group
+  - _id: req_eb322adfd88b40d083088c18abd3e18b
+    parentId: fld_8eee4b8b5e644066b078eb953c73e410
+    modified: 1656932950971
+    created: 1656932859244
+    url: "{{ _.BaseURL }}brands"
+    name: GetBrands
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1656932777405
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_24cfbb2cc811dc996d1a8f266f49d767f5f14b40
+    parentId: wrk_40b6a3e273d54474a85efd1a7614d0a4
+    modified: 1656934731243
+    created: 1656932766963
+    name: Base Environment
+    data:
+      BaseURL: http://localhost:3000/
+    dataPropertyOrder:
+      "&":
+        - BaseURL
+    color: null
+    isPrivate: false
+    metaSortKey: 1656932766963
+    _type: environment
+  - _id: jar_24cfbb2cc811dc996d1a8f266f49d767f5f14b40
+    parentId: wrk_40b6a3e273d54474a85efd1a7614d0a4
+    modified: 1656932766965
+    created: 1656932766965
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar
+  - _id: spc_78d6724aa59048f39ef5e1305684fd27
+    parentId: wrk_40b6a3e273d54474a85efd1a7614d0a4
+    modified: 1656932766949
+    created: 1656932766949
+    fileName: Carfinder
+    contents: ""
+    contentType: yaml
+    _type: api_spec
