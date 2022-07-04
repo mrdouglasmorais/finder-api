@@ -11,6 +11,7 @@ import CarModelController from './app/controllers/CarModelControllers';
 import MleageController from './app/controllers/MileageController';
 import FuelController from './app/controllers/FuelController';
 import AdditionalController from './app/controllers/AdditionalController';
+import AdvertsController from './app/controllers/AdvertsController';
 
 // swagger
 import swaggerUI from 'swagger-ui-express';
@@ -68,6 +69,7 @@ routes.post('/additional', AdditionalController.store);
 routes.get('/additional', AdditionalController.index);
 
 // Adverts
-routes.get('/adverts', BrandController.index);
+routes.post('/adverts', AdvertsController.store);
+routes.get('/adverts', AdvertsController.index);
 
 export default routes;

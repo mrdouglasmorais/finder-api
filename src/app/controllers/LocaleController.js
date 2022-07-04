@@ -2,7 +2,6 @@ import Locale from '../models/Locale';
 
 class LocaleController {
   async store(req, res){
-    console.log('resposta', req.body)
     const data = await Locale.create(req.body)
     return res.json(data)
   }
