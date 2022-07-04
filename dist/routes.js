@@ -11,6 +11,7 @@ var _CarModelControllers = require('./app/controllers/CarModelControllers'); var
 var _MileageController = require('./app/controllers/MileageController'); var _MileageController2 = _interopRequireDefault(_MileageController);
 var _FuelController = require('./app/controllers/FuelController'); var _FuelController2 = _interopRequireDefault(_FuelController);
 var _AdditionalController = require('./app/controllers/AdditionalController'); var _AdditionalController2 = _interopRequireDefault(_AdditionalController);
+var _CarPhotosController = require('./app/controllers/CarPhotosController'); var _CarPhotosController2 = _interopRequireDefault(_CarPhotosController);
 var _AdvertsController = require('./app/controllers/AdvertsController'); var _AdvertsController2 = _interopRequireDefault(_AdvertsController);
 
 // swagger
@@ -67,6 +68,10 @@ routes.get('/fuel', _FuelController2.default.index);
 // Additionals
 routes.post('/additional', _AdditionalController2.default.store);
 routes.get('/additional', _AdditionalController2.default.index);
+
+// Adverts
+routes.post('/photos', _CarPhotosController2.default.store);
+routes.get('/photos', _CarPhotosController2.default.index);
 
 // Adverts
 routes.post('/adverts', _AdvertsController2.default.store);

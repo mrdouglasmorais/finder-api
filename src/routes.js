@@ -11,6 +11,7 @@ import CarModelController from './app/controllers/CarModelControllers';
 import MleageController from './app/controllers/MileageController';
 import FuelController from './app/controllers/FuelController';
 import AdditionalController from './app/controllers/AdditionalController';
+import CarPhotosController from './app/controllers/CarPhotosController';
 import AdvertsController from './app/controllers/AdvertsController';
 
 // swagger
@@ -67,6 +68,10 @@ routes.get('/fuel', FuelController.index);
 // Additionals
 routes.post('/additional', AdditionalController.store);
 routes.get('/additional', AdditionalController.index);
+
+// Adverts
+routes.post('/photos', CarPhotosController.store);
+routes.get('/photos', CarPhotosController.index);
 
 // Adverts
 routes.post('/adverts', AdvertsController.store);
