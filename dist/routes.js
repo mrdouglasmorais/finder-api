@@ -10,28 +10,32 @@ var _swagger = require('../swagger'); var _swagger2 = _interopRequireDefault(_sw
 
 const routes = new (0, _express.Router)();
 
-routes.use('/swagger', _swaggeruiexpress2.default.serve, _swaggeruiexpress2.default.setup(_swagger2.default));
+// Swagger Route
+routes.use('/', _swaggeruiexpress2.default.serve, _swaggeruiexpress2.default.setup(_swagger2.default));
 
-routes.get('/', (req, res) => {
-  res.json({
-    message: `Tudo certo com os trem ${process.env.DB_HOST}`
-  })
-});
-
+// Brands
+routes.post('/brands', _BrandController2.default.store);
 routes.get('/brands', _BrandController2.default.index);
 
+// Conditions
 routes.get('/condition', _BrandController2.default.index);
 
+// Collors
 routes.get('/colors', _BrandController2.default.index);
 
+// Cartypes
 routes.get('/cartype', _BrandController2.default.index);
 
+// Transmissions
 routes.get('/transmission', _BrandController2.default.index);
 
+// Locales
 routes.get('/locale', _BrandController2.default.index);
 
+// Car Models
 routes.get('/car_models', _BrandController2.default.index);
 
+// Adverts
 routes.get('/adverts', _BrandController2.default.index);
 
 exports. default = routes;
