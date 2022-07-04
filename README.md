@@ -6,7 +6,8 @@
 ## Para acessar o swagger:
 [Clique aqui](https://carfinder-api.herokuapp.com/swagger/)
 
-## Collections Insomnia
+## Collections Insomnia:
+[Clique aqui]()
 
 ### Projeto exclusivo Icarros <> GamaAcademy
 
