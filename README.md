@@ -9,4 +9,4 @@
 ### Projeto exclusivo Icarros <> GamaAcademy
 
 ### Professor Douglas Morais
-#### Desenvolvido com Ódio!
+#### Desenvolvido com NodeJS | GamaAcademy
