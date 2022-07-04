@@ -10,29 +10,32 @@ import swaggerDocument from '../swagger';
 
 const routes = new Router();
 
-routes.use('/swagger', swaggerUI.serve, swaggerUI.setup(swaggerDocument));
+// Swagger Route
+routes.use('/', swaggerUI.serve, swaggerUI.setup(swaggerDocument));
 
-routes.get('/', (req, res) => {
-  res.json({
-    message: `Tudo certo com os trem ${process.env.DB_HOST}`
-  })
-});
-
+// Brands
 routes.post('/brands', BrandController.store);
 routes.get('/brands', BrandController.index);
 
+// Conditions
 routes.get('/condition', BrandController.index);
 
+// Collors
 routes.get('/colors', BrandController.index);
 
+// Cartypes
 routes.get('/cartype', BrandController.index);
 
+// Transmissions
 routes.get('/transmission', BrandController.index);
 
+// Locales
 routes.get('/locale', BrandController.index);
 
+// Car Models
 routes.get('/car_models', BrandController.index);
 
+// Adverts
 routes.get('/adverts', BrandController.index);
 
 export default routes;
