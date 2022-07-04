@@ -11,7 +11,13 @@ var _swagger = require('../swagger'); var _swagger2 = _interopRequireDefault(_sw
 const routes = new (0, _express.Router)();
 
 // Swagger Route
-routes.use('/', _swaggeruiexpress2.default.serve, _swaggeruiexpress2.default.setup(_swagger2.default));
+routes.use('/swagger', _swaggeruiexpress2.default.serve, _swaggeruiexpress2.default.setup(_swagger2.default));
+
+routes.get('/', (req, res) => {
+  return res.json({
+    message: 'operation API'
+  })
+})
 
 // Brands
 routes.post('/brands', _BrandController2.default.store);

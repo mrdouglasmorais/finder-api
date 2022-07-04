@@ -6,6 +6,8 @@
 ## Para acessar o swagger:
 [Clique aqui](https://carfinder-api.herokuapp.com/swagger/)
 
+## Collections Insomnia
+
 ### Projeto exclusivo Icarros <> GamaAcademy
 
 ### Professor Douglas Morais

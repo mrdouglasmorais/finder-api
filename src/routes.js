@@ -11,7 +11,13 @@ import swaggerDocument from '../swagger';
 const routes = new Router();
 
 // Swagger Route
-routes.use('/', swaggerUI.serve, swaggerUI.setup(swaggerDocument));
+routes.use('/swagger', swaggerUI.serve, swaggerUI.setup(swaggerDocument));
+
+routes.get('/', (req, res) => {
+  return res.json({
+    message: 'operation API'
+  })
+})
 
 // Brands
 routes.post('/brands', BrandController.store);
