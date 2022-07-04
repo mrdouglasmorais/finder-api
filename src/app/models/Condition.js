@@ -1,10 +1,9 @@
 import Sequelize, { Model } from 'sequelize';
 
-class Brand extends Model {
+class Condition extends Model {
   static init(sequelize) {
     super.init({
-      name: Sequelize.STRING,
-      logo: Sequelize.STRING
+      value: Sequelize.STRING
     }, 
     {  
       sequelize, 
@@ -13,4 +12,4 @@ class Brand extends Model {
   }
 }
 
-export default Brand
+export default Condition

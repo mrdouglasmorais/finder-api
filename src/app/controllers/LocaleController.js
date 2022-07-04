@@ -1,0 +1,18 @@
+import Locale from '../models/Locale';
+
+class LocaleController {
+  async store(req, res){
+    console.log('resposta', req.body)
+    const data = await Locale.create(req.body)
+    return res.json(data)
+  }
+
+  async index(req, res){
+    const allColors = await Locale.findAll({
+      attributes: ['id', 'value']
+    })
+    return res.json(allColors)
+  }
+}
+
+export default new LocaleController();
