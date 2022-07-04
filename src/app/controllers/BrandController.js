@@ -11,10 +11,10 @@ class BradsController {
   }
 
   async index(req, res){
-    return res.json({
-      message: 'Okay'
+    const allBrands = await Brand.findAll({
+      attributes: ['id', 'name', 'logo']
     })
-
+    return res.json(allBrands)
   }
 }
 

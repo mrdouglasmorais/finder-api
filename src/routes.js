@@ -18,6 +18,7 @@ routes.get('/', (req, res) => {
   })
 });
 
+routes.post('/brands', BrandController.store);
 routes.get('/brands', BrandController.index);
 
 routes.get('/condition', BrandController.index);

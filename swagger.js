@@ -6,13 +6,13 @@ module.exports = {
     title: 'Car Finder',
     contact: { email: 'mr.douglasmorais23@gmail.com'}
   },
-  host: 'http://localhost:3000',
+  host: 'https://carfinder-api.herokuapp.com',
   schema: ['http'],
   paths: {
-    '/users': {
+    '/brads': {
       post: {
         tags: [
-          'Users',
+          'Brands',
         ],
         parameters: [
           {
@@ -23,7 +23,7 @@ module.exports = {
             schema: { $ref: '#/definitions/CreateUserBody' },
           },
         ],
-        summary: 'Cadastra um usuário na base',
+        summary: 'Cadastra uma marca na base',
         description: '',
         operationId: 'add',
         consumes: [
