@@ -13,6 +13,10 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
+      version: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
       brand: {
         type: Sequelize.INTEGER,
         references: { model: 'brands', key: 'id'},
@@ -27,7 +31,7 @@ module.exports = {
         onDelete: 'SET NULL',
         allowNull: true
       },
-      cerifield: {
+      certifield: {
         type: Sequelize.BOOLEAN,
         allowNull: true
       },
@@ -39,7 +43,7 @@ module.exports = {
         allowNull: true
       },
       price: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.FLOAT,
         allowNull: false
       },
       year: {
@@ -77,7 +81,15 @@ module.exports = {
         onUpdate: 'CASCADE',
         onDelete: 'SET NULL',
         allowNull: true
-      }
+      },
+      created_at: {
+        type: Sequelize.DATE,
+        allowNull: false,
+      },
+      updated_at: {
+        type: Sequelize.DATE,
+        allowNull: false,
+      },
     })
   },
 

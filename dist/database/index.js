@@ -10,6 +10,8 @@ var _Carmodel = require('../app/models/Carmodel'); var _Carmodel2 = _interopRequ
 var _Mileage = require('../app/models/Mileage'); var _Mileage2 = _interopRequireDefault(_Mileage);
 var _Fuel = require('../app/models/Fuel'); var _Fuel2 = _interopRequireDefault(_Fuel);
 var _Additional = require('../app/models/Additional'); var _Additional2 = _interopRequireDefault(_Additional);
+var _Adverts = require('../app/models/Adverts'); var _Adverts2 = _interopRequireDefault(_Adverts);
+var _Carphoto = require('../app/models/Carphoto'); var _Carphoto2 = _interopRequireDefault(_Carphoto);
 
 var _database = require('../config/database'); var _database2 = _interopRequireDefault(_database);
 
@@ -23,7 +25,9 @@ const models = [
   _Carmodel2.default,
   _Mileage2.default,
   _Fuel2.default,
-  _Additional2.default
+  _Additional2.default,
+  _Adverts2.default,
+  _Carphoto2.default
 ];
 
 class Database{

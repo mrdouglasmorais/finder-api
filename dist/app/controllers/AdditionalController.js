@@ -2,18 +2,22 @@
 
 class AdditionalController {
   async store(req, res){
-    const {id, value} = await _Additional2.default.create(req.body)
+    const {id, model, version, cerifield, price, year} = await _Additional2.default.create(req.body)
     return res.json({
-      id,
-      value
+      id, 
+      model, 
+      version, 
+      cerifield, 
+      price, 
+      year
     })
   }
 
   async index(req, res){
-    const allAdditionals = await _Additional2.default.findAll({
-      attributes: ['id', 'value']
+    const allAdverts = await _Additional2.default.findAll({
+      attributes: ['id', 'model', 'certifield', 'price', 'year', 'description']
     })
-    return res.json(allAdditionals)
+    return res.json(allAdverts)
   }
 }
 

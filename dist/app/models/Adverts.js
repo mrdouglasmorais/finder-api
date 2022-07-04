@@ -22,6 +22,7 @@ class Adverts extends _sequelize.Model {
     this.belongsTo( models.Mileage, { foreignKey: 'id', as: 'mileage'})
     this.belongsTo( models.Cartype, { foreignKey: 'id', as: 'cartype'})
     this.belongsTo( models.Color, { foreignKey: 'id', as: 'color'})
+    this.belongsTo( models.Fuel, { foreignKey: 'id', as: 'fuel'})
     this.belongsTo( models.Carphoto, { foreignKey: 'id', as: 'photos'})
     this.belongsTo( models.Additional, { foreignKey: 'id', as: 'additional'})
   }
