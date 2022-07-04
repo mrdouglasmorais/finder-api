@@ -13,6 +13,10 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
+      version: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
       brand: {
         type: Sequelize.INTEGER,
         references: { model: 'brands', key: 'id'},
@@ -27,7 +31,7 @@ module.exports = {
         onDelete: 'SET NULL',
         allowNull: true
       },
-      cerifield: {
+      certifield: {
         type: Sequelize.BOOLEAN,
         allowNull: true
       },

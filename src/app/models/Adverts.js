@@ -16,14 +16,15 @@ class Adverts extends Model {
     return this;
   }
   static associate(models){
-    this.belongsTo( models.Brand, { foreignKey: 'id_brand', as: 'brand'})
-    this.belongsTo( models.Condition, { foreignKey: 'id_condition', as: 'condition'})
-    this.belongsTo( models.Locale, { foreignKey: 'id_location', as: 'location'})
-    this.belongsTo( models.Mileage, { foreignKey: 'id_mileage', as: 'mileage'})
-    this.belongsTo( models.Cartype, { foreignKey: 'id_cartype', as: 'cartype'})
-    this.belongsTo( models.Color, { foreignKey: 'id_color', as: 'color'})
-    this.belongsTo( models.Carphoto, { foreignKey: 'id_photo', as: 'photos'})
-    this.belongsTo( models.Additional, { foreignKey: 'id_additional', as: 'additional'})
+    this.belongsTo( models.Brand, { foreignKey: 'id', as: 'brand'})
+    this.belongsTo( models.Condition, { foreignKey: 'id', as: 'condition'})
+    this.belongsTo( models.Locale, { foreignKey: 'id', as: 'location'})
+    this.belongsTo( models.Mileage, { foreignKey: 'id', as: 'mileage'})
+    this.belongsTo( models.Cartype, { foreignKey: 'id', as: 'cartype'})
+    this.belongsTo( models.Color, { foreignKey: 'id', as: 'color'})
+    this.belongsTo( models.Fuel, { foreignKey: 'id', as: 'fuel'})
+    this.belongsTo( models.Carphoto, { foreignKey: 'id', as: 'photos'})
+    this.belongsTo( models.Additional, { foreignKey: 'id', as: 'additional'})
   }
 }
 

@@ -10,8 +10,8 @@ class CarPhotosController {
   }
 
   async index(req, res){
-    const allPhotos = await Carmodel.findAll({
-      attributes: ['id', 'value']
+    const allPhotos = await Carphoto.findAll({
+      attributes: ['value']
     })
     return res.json(allPhotos)
   }
