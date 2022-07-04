@@ -1,13 +1,21 @@
 "use strict";'use strict';
 
 module.exports = {
-  up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('createcaradditionals', {
-      // table content
-    })
+  up: async (queryInterface, Sequelize) => {
+    return queryInterface.addColumn(
+      'adverts',
+      'additional_id',
+      {
+        type: Sequelize.INTEGER,
+        references: { model: 'additionals', key: 'id'},
+        onUpdate: 'CASCADE',
+        onDelete: 'SET NULL',
+        allowNull: true
+      }
+    )
   },
 
-  down: queryInterface => {
-    return queryInterface.dropTable('createcaradditionals')
+  down: async queryInterface => {
+    return queryInterface.removeColumn('adverts', 'additional_id');
   }
 };
