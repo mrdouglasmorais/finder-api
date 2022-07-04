@@ -1,8 +1,8 @@
 "use strict";'use strict';
 
 module.exports = {
-  up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('carphotos', {
+  up: (queryInterface, Sequelize)  => {
+    return queryInterface.createTable('fuel', {
       id: {
         type: Sequelize.INTEGER,
         allowNull: false,
@@ -24,7 +24,7 @@ module.exports = {
     })
   },
 
-  down: queryInterface => {
-    return queryInterface.dropTable('carphotos')
+  down: queryInterface=> {
+    return queryInterface.dropTable('fuel');
   }
 };
