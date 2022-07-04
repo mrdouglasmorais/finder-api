@@ -1,8 +1,8 @@
 module.exports = {
   swagger: '2.0',
   info: {
-    description: 'Documentação de API',
-    version: '1.0.0',
+    description: 'Documentação - Finder API',
+    version: '1.1.0',
     title: 'Car Finder',
     contact: { email: 'mr.douglasmorais23@gmail.com'}
   },
@@ -20,7 +20,7 @@ module.exports = {
             name: 'body',
             description: 'Você deve passar o email e password no body',
             required: true,
-            schema: { $ref: '#/definitions/CreateUserBody' },
+            schema: { $ref: '#/definitions/CreateBrandyBody' },
           },
         ],
         summary: 'Cadastra uma marca na base',
@@ -37,7 +37,7 @@ module.exports = {
             description: 'successful operation',
             schema: {
               type: 'array',
-              items: { $ref: '#/definitions/CreateUser' },
+              items: { $ref: '#/definitions/CreateBrand' },
             },
           },
           409: { description: 'Usuário já cadastrado' },
@@ -139,11 +139,11 @@ module.exports = {
       },
       xml: { name: 'Usuario' },
     },
-    CreateUser: {
+    CreateBrand: {
       type: 'object',
       required: [
-        'email',
-        'password',
+        'name',
+        'logo',
       ],
       properties: {
         id: {
@@ -156,22 +156,21 @@ module.exports = {
       },
       xml: { name: 'Usuario' },
     },
-    CreateUserBody: {
+    CreateBrandyBody: {
       type: 'object',
       required: [
-        'email',
-        'password',
+        'name',
+        'logo',
       ],
       properties: {
         name: { type: 'string' },
-        email: { type: 'string' },
-        password: { type: 'string' },
+        logo: { type: 'string' }
       },
-      xml: { name: 'Usuario' },
+      xml: { name: 'Brand' },
     },
   },
   externalDocs: {
     description: 'Acesse o repositorio',
-    url: 'http://github.com',
+    url: 'https://github.com/mrdouglasmorais/finder-api',
   },
 }
