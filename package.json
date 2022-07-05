@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build":  "sucrase ./src -d ./dist --transforms imports",
+    "build": "sucrase ./src -d ./dist --transforms imports",
     "dev": "nodemon src/server.js",
     "start": "node dist/server.js"
   },
@@ -26,6 +26,7 @@
     "express": "^4.18.1",
     "pg": "^8.7.3",
     "pg-hstore": "^2.3.4",
+    "sequelice-query": "^1.0.3",
     "sequelize": "^6.21.2",
     "swagger-ui-express": "^4.4.0"
   },

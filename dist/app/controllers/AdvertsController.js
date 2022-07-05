@@ -1,4 +1,6 @@
-"use strict";Object.defineProperty(exports, "__esModule", {value: true}); function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }var _Adverts = require('../models/Adverts'); var _Adverts2 = _interopRequireDefault(_Adverts);
+"use strict";Object.defineProperty(exports, "__esModule", {value: true}); function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }var _sequelicequery = require('sequelice-query'); var _sequelicequery2 = _interopRequireDefault(_sequelicequery);
+
+var _Adverts = require('../models/Adverts'); var _Adverts2 = _interopRequireDefault(_Adverts);
 var _Brand = require('../models/Brand'); var _Brand2 = _interopRequireDefault(_Brand);
 var _Cartype = require('../models/Cartype'); var _Cartype2 = _interopRequireDefault(_Cartype);
 var _Condition = require('../models/Condition'); var _Condition2 = _interopRequireDefault(_Condition);
@@ -47,73 +49,68 @@ class AdvertsController{
     })
   }
   async index(req, res){
-    try {
-      const { page = 1 } = req.query;
+    const { page = 1 } = req.query;
+    const dataContent = req.query;
+    delete dataContent.page;
+    const returnData = await _Adverts2.default.findAll({
+      where: dataContent,
+      order: ['created_at'],
+      limit: 20,
+      offset: (page - 1) * 20,
+      include: [
+        {
+          model: _Condition2.default,
+          as: 'condition',
+          attributes: ['value']
+        },
+        {
+          model: _Brand2.default,
+          as: 'brand',
+          attributes: ['id', 'value', 'logo']
+        },
+        {
+          model: _Locale2.default,
+          as: 'location',
+          attributes: ['value']
+        },
+        {
+          model: _Mileage2.default,
+          as: 'mileage',
+          attributes: ['value']
+        },
+        {
+          model: _Cartype2.default,
+          as: 'cartype',
+          attributes: ['value']
+        },
+        {
+          model: _Color2.default,
+          as: 'color',
+          attributes: ['value']
+        },
+        {
+          model: _Fuel2.default,
+          as: 'fuel',
+          attributes: ['value']
+        },
+        {
+          model: _Carphoto2.default,
+          as: 'photos',
+          attributes: ['value']
+        },
+        {
+          model: _Additional2.default,
+          as: 'additional',
+          attributes: ['value']
+        },
+      ]
+    })
 
-      const returnData = await _Adverts2.default.findAll({
-        order: ['created_at'],
-        limit: 20,
-        offset: (page - 1) * 20,
-        include: [
-          {
-            model: _Condition2.default,
-            as: 'condition',
-            attributes: ['value']
-          },
-          {
-            model: _Brand2.default,
-            as: 'brand',
-            attributes: ['id', 'value', 'logo']
-          },
-          {
-            model: _Locale2.default,
-            as: 'location',
-            attributes: ['value']
-          },
-          {
-            model: _Mileage2.default,
-            as: 'mileage',
-            attributes: ['value']
-          },
-          {
-            model: _Cartype2.default,
-            as: 'cartype',
-            attributes: ['value']
-          },
-          {
-            model: _Color2.default,
-            as: 'color',
-            attributes: ['value']
-          },
-          {
-            model: _Fuel2.default,
-            as: 'fuel',
-            attributes: ['value']
-          },
-          {
-            model: _Carphoto2.default,
-            as: 'photos',
-            attributes: ['value']
-          },
-          {
-            model: _Additional2.default,
-            as: 'additional',
-            attributes: ['value']
-          },
-        ]
-      })
-      return res.json({
-        page,
-        results: returnData
+    return res.json({
+      page,
+      results: returnData
 
-      })
-
-    } catch (err) {
-      res.status(500).json({
-        message: "Api error",
-        err
-      })
-    }
+    })
   }
 }
 
