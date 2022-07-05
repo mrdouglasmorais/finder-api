@@ -1,5 +1,3 @@
-import sQuery from 'sequelice-query';
-
 import Adverts from '../models/Adverts';
 import Brand from '../models/Brand';
 import Cartype from '../models/Cartype';
@@ -26,10 +24,12 @@ class AdvertsController{
       price, 
       description, 
       mileage, 
-      cartype, 
+      cartype,
+      kilometers, 
       color, 
-      photosm, 
-      fuel } = await Adverts.create(req.body)
+      photos, 
+      fuel } = await Adverts.create(req.body);
+
     return res.json({
       id, 
       model, 
@@ -43,8 +43,9 @@ class AdvertsController{
       description, 
       mileage, 
       cartype, 
-      color, 
-      photosm, 
+      color,
+      kilometers, 
+      photos, 
       fuel
     })
   }
@@ -63,7 +64,7 @@ class AdvertsController{
           {
             model: Condition,
             as: 'condition',
-            attributes: ['value']
+            attributes: ['id', 'value']
           },
           {
             model: Brand,
@@ -73,32 +74,32 @@ class AdvertsController{
           {
             model: Locale,
             as: 'location',
-            attributes: ['value']
+            attributes: ['id', 'value']
           },
           {
             model: Mileage,
             as: 'mileage',
-            attributes: ['value']
+            attributes: ['id', 'value']
           },
           {
             model: Cartype,
             as: 'cartype',
-            attributes: ['value']
+            attributes: ['id', 'value']
           },
           {
             model: Color,
             as: 'color',
-            attributes: ['value']
+            attributes: ['id', 'value']
           },
           {
             model: Fuel,
             as: 'fuel',
-            attributes: ['value']
+            attributes: ['id', 'value']
           },
           {
             model: Carphoto,
             as: 'photos',
-            attributes: ['value']
+            attributes: ['id', 'value']
           },
           {
             model: Additional,
@@ -110,7 +111,7 @@ class AdvertsController{
 
       return res.json({
         page,
-        totalPages: returnData.length / 20,
+        totalPages: (returnData.length / 20 + 1).toFixed(),
         results: returnData
       })
       

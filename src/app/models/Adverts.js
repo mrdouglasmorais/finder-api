@@ -8,6 +8,7 @@ class Adverts extends Model {
       certifield: Sequelize.BOOLEAN,
       price: Sequelize.FLOAT,
       year: Sequelize.INTEGER,
+      kilometers: Sequelize.STRING,
       description: Sequelize.STRING,
     }, 
     {  
