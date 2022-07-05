@@ -50,7 +50,7 @@ class AdvertsController{
     })
   }
   async index(req, res){
-
+    console.log(req.query.year)
     try {
       const { page = 1 } = req.query;
       const dataContent = req.query;
@@ -111,6 +111,7 @@ class AdvertsController{
 
       return res.json({
         page,
+        resultsFor: returnData.length,
         totalPages: (returnData.length / 20 + 1).toFixed(),
         results: returnData
       })
