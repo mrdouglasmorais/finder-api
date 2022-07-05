@@ -1,6 +1,6 @@
 _type: export
 __export_format: 4
-__export_date: 2022-07-05T00:02:12.114Z
+__export_date: 2022-07-05T02:40:42.745Z
 __export_source: insomnia.desktop.app:v2022.4.2
 resources:
   - _id: req_137d7b74e1984f229ea32f92ca0509a3
@@ -133,9 +133,9 @@ resources:
     _type: request
   - _id: req_0afe3ba79a3044dfbc547be88fba2930
     parentId: fld_e9a43ac62bcb452ca1a73d006cc2a1db
-    modified: 1656979073168
+    modified: 1656986516405
     created: 1656951519933
-    url: "{{ _.BaseURL }}adverts?page=1"
+    url: "{{ _.BaseURL }}adverts?page=1&brand=5&fuel= "
     name: Get Adverts
     description: ""
     method: GET
@@ -164,7 +164,7 @@ resources:
     _type: request_group
   - _id: req_fb4b58c99288485cb481c316cc1f1f8b
     parentId: fld_e9a43ac62bcb452ca1a73d006cc2a1db
-    modified: 1656977298732
+    modified: 1656983432718
     created: 1656972144939
     url: "{{ _.BaseURL }}adverts"
     name: Post Adverts
@@ -174,12 +174,13 @@ resources:
       mimeType: application/json
       text: |-
         {
-            "model": "Honda Civic",
-            "version": "EXL",
+            "model": "Honda Fit",
+            "version": "LX",
             "cerifield": true,
             "year": 2022,
-            "price": 137.608,
-            "description": "Honda Civic"
+            "price": 30.908,
+            "description": "Honda Civic",
+        		"kilometers": "18k"
          }
     parameters: []
     headers:
@@ -739,11 +740,11 @@ resources:
     _type: request
   - _id: env_24cfbb2cc811dc996d1a8f266f49d767f5f14b40
     parentId: wrk_40b6a3e273d54474a85efd1a7614d0a4
-    modified: 1656979281846
+    modified: 1656988815173
     created: 1656932766963
     name: Base Environment
     data:
-      BaseURL: https://carfinder-api.herokuapp.com/
+      BaseURL: https://monkfish-app-2xvm7.ondigitalocean.app/
     dataPropertyOrder:
       "&":
         - BaseURL
