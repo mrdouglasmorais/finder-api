@@ -49,68 +49,76 @@ class AdvertsController{
     })
   }
   async index(req, res){
-    const { page = 1 } = req.query;
-    const dataContent = req.query;
-    delete dataContent.page;
-    const returnData = await Adverts.findAll({
-      where: dataContent,
-      order: ['created_at'],
-      limit: 20,
-      offset: (page - 1) * 20,
-      include: [
-        {
-          model: Condition,
-          as: 'condition',
-          attributes: ['value']
-        },
-        {
-          model: Brand,
-          as: 'brand',
-          attributes: ['id', 'value', 'logo']
-        },
-        {
-          model: Locale,
-          as: 'location',
-          attributes: ['value']
-        },
-        {
-          model: Mileage,
-          as: 'mileage',
-          attributes: ['value']
-        },
-        {
-          model: Cartype,
-          as: 'cartype',
-          attributes: ['value']
-        },
-        {
-          model: Color,
-          as: 'color',
-          attributes: ['value']
-        },
-        {
-          model: Fuel,
-          as: 'fuel',
-          attributes: ['value']
-        },
-        {
-          model: Carphoto,
-          as: 'photos',
-          attributes: ['value']
-        },
-        {
-          model: Additional,
-          as: 'additional',
-          attributes: ['value']
-        },
-      ]
-    })
 
-    return res.json({
-      page,
-      results: returnData
+    try {
+      const { page = 1 } = req.query;
+      const dataContent = req.query;
+      delete dataContent.page;
+      const returnData = await Adverts.findAll({
+        where: dataContent,
+        order: ['created_at'],
+        limit: 20,
+        offset: (page - 1) * 20,
+        include: [
+          {
+            model: Condition,
+            as: 'condition',
+            attributes: ['value']
+          },
+          {
+            model: Brand,
+            as: 'brand',
+            attributes: ['id', 'value', 'logo']
+          },
+          {
+            model: Locale,
+            as: 'location',
+            attributes: ['value']
+          },
+          {
+            model: Mileage,
+            as: 'mileage',
+            attributes: ['value']
+          },
+          {
+            model: Cartype,
+            as: 'cartype',
+            attributes: ['value']
+          },
+          {
+            model: Color,
+            as: 'color',
+            attributes: ['value']
+          },
+          {
+            model: Fuel,
+            as: 'fuel',
+            attributes: ['value']
+          },
+          {
+            model: Carphoto,
+            as: 'photos',
+            attributes: ['value']
+          },
+          {
+            model: Additional,
+            as: 'additional',
+            attributes: ['value']
+          },
+        ]
+      })
 
-    })
+      return res.json({
+        page,
+        totalPages: returnData.length / 20,
+        results: returnData
+      })
+      
+    } catch (error) {
+      return res.status(400).json({
+        message: "Error API"
+      })
+    }
   }
 }
 
