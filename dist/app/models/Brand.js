@@ -3,7 +3,7 @@
 class Brand extends _sequelize.Model {
   static init(sequelize) {
     super.init({
-      name: _sequelize2.default.STRING,
+      value: _sequelize2.default.STRING,
       logo: _sequelize2.default.STRING
     }, 
     {  

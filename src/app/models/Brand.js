@@ -3,7 +3,7 @@ import Sequelize, { Model } from 'sequelize';
 class Brand extends Model {
   static init(sequelize) {
     super.init({
-      name: Sequelize.STRING,
+      value: Sequelize.STRING,
       logo: Sequelize.STRING
     }, 
     {  

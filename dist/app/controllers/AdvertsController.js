@@ -47,40 +47,23 @@ class AdvertsController{
     })
   }
   async index(req, res){
-    const { page = 1 } = req.query;
-    const { 
-      model, 
-      version, 
-      condition, 
-      certifield, 
-      location, 
-      brand, 
-      year, 
-      price, 
-      description, 
-      mileage, 
-      cartype, 
-      color, 
-      photosm, 
-      fuel
-    } = req.query
+    try {
+      const { page = 1 } = req.query;
 
-    if(req.query.model){
       const returnData = await _Adverts2.default.findAll({
-        where: {},
         order: ['created_at'],
         limit: 20,
         offset: (page - 1) * 20,
         include: [
           {
-            model: _Brand2.default,
-            as: 'brand',
-            attributes: ['name']
-          },
-          {
             model: _Condition2.default,
             as: 'condition',
             attributes: ['value']
+          },
+          {
+            model: _Brand2.default,
+            as: 'brand',
+            attributes: ['id', 'value', 'logo']
           },
           {
             model: _Locale2.default,
@@ -124,10 +107,13 @@ class AdvertsController{
         results: returnData
 
       })
+
+    } catch (err) {
+      res.status(500).json({
+        message: "Api error",
+        err
+      })
     }
-    return res.json({
-      message: "OK"
-    })
   }
 }
 
