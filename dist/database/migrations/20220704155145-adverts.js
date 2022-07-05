@@ -17,6 +17,10 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
+      kilometers: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
       brand: {
         type: Sequelize.INTEGER,
         references: { model: 'brands', key: 'id'},
