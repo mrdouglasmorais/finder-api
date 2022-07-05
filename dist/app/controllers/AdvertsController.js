@@ -49,68 +49,76 @@ class AdvertsController{
     })
   }
   async index(req, res){
-    const { page = 1 } = req.query;
-    const dataContent = req.query;
-    delete dataContent.page;
-    const returnData = await _Adverts2.default.findAll({
-      where: dataContent,
-      order: ['created_at'],
-      limit: 20,
-      offset: (page - 1) * 20,
-      include: [
-        {
-          model: _Condition2.default,
-          as: 'condition',
-          attributes: ['value']
-        },
-        {
-          model: _Brand2.default,
-          as: 'brand',
-          attributes: ['id', 'value', 'logo']
-        },
-        {
-          model: _Locale2.default,
-          as: 'location',
-          attributes: ['value']
-        },
-        {
-          model: _Mileage2.default,
-          as: 'mileage',
-          attributes: ['value']
-        },
-        {
-          model: _Cartype2.default,
-          as: 'cartype',
-          attributes: ['value']
-        },
-        {
-          model: _Color2.default,
-          as: 'color',
-          attributes: ['value']
-        },
-        {
-          model: _Fuel2.default,
-          as: 'fuel',
-          attributes: ['value']
-        },
-        {
-          model: _Carphoto2.default,
-          as: 'photos',
-          attributes: ['value']
-        },
-        {
-          model: _Additional2.default,
-          as: 'additional',
-          attributes: ['value']
-        },
-      ]
-    })
 
-    return res.json({
-      page,
-      results: returnData
+    try {
+      const { page = 1 } = req.query;
+      const dataContent = req.query;
+      delete dataContent.page;
+      const returnData = await _Adverts2.default.findAll({
+        where: dataContent,
+        order: ['created_at'],
+        limit: 20,
+        offset: (page - 1) * 20,
+        include: [
+          {
+            model: _Condition2.default,
+            as: 'condition',
+            attributes: ['value']
+          },
+          {
+            model: _Brand2.default,
+            as: 'brand',
+            attributes: ['id', 'value', 'logo']
+          },
+          {
+            model: _Locale2.default,
+            as: 'location',
+            attributes: ['value']
+          },
+          {
+            model: _Mileage2.default,
+            as: 'mileage',
+            attributes: ['value']
+          },
+          {
+            model: _Cartype2.default,
+            as: 'cartype',
+            attributes: ['value']
+          },
+          {
+            model: _Color2.default,
+            as: 'color',
+            attributes: ['value']
+          },
+          {
+            model: _Fuel2.default,
+            as: 'fuel',
+            attributes: ['value']
+          },
+          {
+            model: _Carphoto2.default,
+            as: 'photos',
+            attributes: ['value']
+          },
+          {
+            model: _Additional2.default,
+            as: 'additional',
+            attributes: ['value']
+          },
+        ]
+      })
 
-    })
+      return res.json({
+        page,
+        totalPages: returnData.length / 20,
+        results: returnData
+      })
+      
+    } catch (error) {
+      return res.status(400).json({
+        message: "Error API"
+      })
+    }
   }
 }
 
