@@ -8,4 +8,4 @@ RUN yarn
 COPY . .
 
 EXPOSE 3000
-CMD ["yarn", "dev:server"]
+CMD ["npm", "start"]
