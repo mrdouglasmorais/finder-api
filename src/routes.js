@@ -8,10 +8,10 @@ import LocaleController from './app/controllers/LocaleController';
 import TransmissionController from './app/controllers/TransmissionController';
 import CartypeController from './app/controllers/CartypeController';
 import CarModelController from './app/controllers/CarModelControllers';
-import MleageController from './app/controllers/MileageController';
+import MileageController from './app/controllers/MileageController';
 import FuelController from './app/controllers/FuelController';
 import AdditionalController from './app/controllers/AdditionalController';
-import CarPhotosController from './app/controllers/CarPhotosController';
+// import CarPhotosController from './app/controllers/CarPhotosController';
 import AdvertsController from './app/controllers/AdvertsController';
 
 // swagger
@@ -58,8 +58,8 @@ routes.post('/carmodels', CarModelController.store);
 routes.get('/carmodels', CarModelController.index);
 
 // Mileage
-routes.post('/mileage', MleageController.store);
-routes.get('/mileage', MleageController.index);
+routes.post('/mileage', MileageController.store);
+routes.get('/mileage', MileageController.index);
 
 // fuel
 routes.post('/fuel', FuelController.store);
@@ -70,8 +70,8 @@ routes.post('/additional', AdditionalController.store);
 routes.get('/additional', AdditionalController.index);
 
 // Adverts
-routes.post('/photos', CarPhotosController.store);
-routes.get('/photos', CarPhotosController.index);
+// routes.post('/photos', CarPhotosController.store);
+// routes.get('/photos', CarPhotosController.index);
 
 // Adverts
 routes.post('/adverts', AdvertsController.store);
