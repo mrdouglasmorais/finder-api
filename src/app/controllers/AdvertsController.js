@@ -50,7 +50,6 @@ class AdvertsController{
     })
   }
   async index(req, res){
-    console.log(req.query.year)
     try {
       const { page = 1 } = req.query;
       const dataContent = req.query;
@@ -58,43 +57,41 @@ class AdvertsController{
       const returnData = await Adverts.findAll({
         where: dataContent,
         order: ['created_at'],
-        limit: 20,
-        offset: (page - 1) * 20,
         include: [
           {
             model: Condition,
             as: 'condition',
-            attributes: ['id', 'value']
+            attributes: ['id']
           },
           {
             model: Brand,
             as: 'brand',
-            attributes: ['id', 'value', 'logo']
+            attributes: ['id']
           },
           {
             model: Locale,
             as: 'location',
-            attributes: ['id', 'value']
+            attributes: ['id']
           },
           {
             model: Mileage,
             as: 'mileage',
-            attributes: ['id', 'value']
+            attributes: ['id']
           },
           {
             model: Cartype,
             as: 'cartype',
-            attributes: ['id', 'value']
+            attributes: ['id']
           },
           {
             model: Color,
             as: 'color',
-            attributes: ['id', 'value']
+            attributes: ['id']
           },
           {
             model: Fuel,
             as: 'fuel',
-            attributes: ['id', 'value']
+            attributes: ['id']
           },
           {
             model: Carphoto,
@@ -104,7 +101,7 @@ class AdvertsController{
           {
             model: Additional,
             as: 'additional',
-            attributes: ['value']
+            attributes: ['id']
           },
         ]
       })
