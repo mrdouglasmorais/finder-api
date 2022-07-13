@@ -1,0 +1,32 @@
+[
+  {
+    "name": "DB_HOST",
+    "value": "db-finder-api-new.postgres.database.azure.com",
+    "slotSetting": false
+  },
+  {
+    "name": "DB_NAME",
+    "value": "postgres",
+    "slotSetting": false
+  },
+  {
+    "name": "DB_PASSWORD",
+    "value": "5D30*NL0n9xS",
+    "slotSetting": false
+  },
+  {
+    "name": "DB_USERNAME",
+    "value": "vcaoqziihh",
+    "slotSetting": false
+  },
+  {
+    "name": "DB_PORT",
+    "value": 5432,
+    "slotSetting": false
+  },
+  {
+    "name": "DB_DIALECT",
+    "value": "postgres",
+    "slotSetting": false
+  }
+]
