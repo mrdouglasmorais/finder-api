@@ -25,7 +25,7 @@ routes.use('/swagger', swaggerUI.serve, swaggerUI.setup(swaggerDocument));
 
 routes.get('/', (req, res) => {
   return res.json({
-    message: "Okay estou no ambiente dev"
+    message: "Funcionando a Versão 1.0.1"
   })
 })
 
