@@ -42,6 +42,9 @@ jobs:
         with:
           name: node-app
 
+      - name: Azure Login
+        uses: Azure/login@v1
+
       - name: 'Publicando na Azure'
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
