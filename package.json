@@ -14,10 +14,7 @@
     "url": "git+https://github.com/mrdouglasmorais/finder-api.git"
   },
   "keywords": [],
-  "author": "",
-  "engines": {
-    "node": "16.13.1"
-  },
+  "author": "Douglas Morais",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/mrdouglasmorais/finder-api/issues"

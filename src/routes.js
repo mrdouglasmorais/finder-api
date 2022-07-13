@@ -25,7 +25,7 @@ routes.use('/swagger', swaggerUI.serve, swaggerUI.setup(swaggerDocument));
 
 routes.get('/', (req, res) => {
   return res.json({
-    message: 'operation API'
+    message: "Okay"
   })
 })
 
