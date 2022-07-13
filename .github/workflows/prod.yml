@@ -48,5 +48,5 @@ jobs:
         with:
           app-name: 'carfinderapi-prod'
           slot-name: 'production'
-          publish-profile: ${{ secrets.AzureAppService_PublishProfile_b524903adc6844e4b144776602c75df4 }}
+          publish-profile: ${{ secrets.AzureAppService_PublishProfile_2fb7696948d24166be8f88b6e12398ae }}
           package: .
