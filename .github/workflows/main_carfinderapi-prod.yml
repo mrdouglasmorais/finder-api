@@ -14,6 +14,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+      
+      - run: |
+          az webapp list --query "[?state=='Running']"
+
       - uses: actions/checkout@v2
 
       - name: Set up Node.js version
