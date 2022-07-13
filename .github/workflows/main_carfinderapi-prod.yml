@@ -15,9 +15,9 @@ jobs:
 
     steps:
       - name: AZ CLI commands
-          run: |
-            az account show
-            
+        run: |
+          az account show
+          
       - uses: azure/login@v1
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
