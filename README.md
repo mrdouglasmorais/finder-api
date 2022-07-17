@@ -14,6 +14,6 @@
 ### Professor Douglas Morais
 #### Desenvolvido com NodeJS | GamaAcademy
 
-[medium](https://medium.com/@mr.douglasmorais23)
-[instagram](https://www.instagram.com/douglasmorais)
+[medium](https://medium.com/@mr.douglasmorais23) | 
+[instagram](https://www.instagram.com/douglasmorais) | 
 [linkedin](https://www.linkedin.com/in/douglasmoraisdev)
